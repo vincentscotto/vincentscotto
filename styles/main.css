@@ -192,7 +192,7 @@ nav {
     position: relative;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 3vw;
+    font-size: 40px;
     margin: 0; }
     .greeting h1:before {
       content: ""; }
