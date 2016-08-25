@@ -75,7 +75,7 @@ a {
 
 nav {
   position: fixed;
-  top: 123px;
+  top: 30px;
   right: 15%;
   color: #ffffff;
   z-index: 11; }
@@ -135,7 +135,7 @@ nav {
 
 .switch {
   position: fixed;
-  top: 137px;
+  top: 40px;
   left: 11%;
   color: #ffffff;
   z-index: 11; }
