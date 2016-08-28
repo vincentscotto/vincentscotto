@@ -201,8 +201,6 @@ nav {
   .greeting .intel {
     box-shadow: 0 1px 0 #00aeef, 0 2px 0 #0071c5;
     color: #00aeef; }
-  .greeting .red {
-    background: red; }
   .greeting .bb {
     position: relative;
     display: inline-block; }
