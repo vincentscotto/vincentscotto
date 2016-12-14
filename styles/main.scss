@@ -1,88 +1,20 @@
-$blue: #0071c5;
-$lightblue: #00aeef;
-$lightgrey: #f3f3f3;
-$medgrey: #d4d4d4;
-$darkishgrey: #666666;
-$darkergrey: #666666;
-$white: #ffffff;
-$orange: #e74c3c;
-$yellow: #e2c044;
-$green: #07df18;
+$red: #f14440;
+$orange: #ffa500;
+$darkorange: #D35400;
+$grey: #e1e1e1;
+$lightgrey: #f0f0f0;
+$medgrey: #8f8f8f;
+$darkgrey: #555555; //575757
+$darkergrey: #2d2d2d;
+$green: #5cc924;
+$darkgreen: #439230;
+$blue: #0071C5;
+$lightblue: #00AEEF;
 
-$nav-icon-bg: #bd3d26;
-
-$link-color: $green;
-
-$intel: 11px;
-$bottom: 0;
-
-$version: '0.1';
-$loading: '\e00c';
-$close: '\e00b';
-$previous: '\e004';
-$next: '\e005';
-$github: '\e003';
-$linkedin: '\e007';
-$twitter: '\e009';
-$pdf: '\e000';
-$word: '\e001';
-$plaintext: '\e002';
-
-$initial: #1C1D21;
-$active: #0F90C0;
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
 @mixin debug() {
   transform: scale(2);
-}
-
-@mixin transition($in) {
-  transition:$in;
-  -webkit-transition:$in;
-  -moz-transition:$in;
-  -o-transition:$in;
-  -ms-transition:$in;
-}
-
-@mixin box-shadow($shadow) {
--webkit-box-shadow: $shadow;
--moz-box-shadow: $shadow;
-box-shadow: $shadow;
-}
-
-@mixin bp-large {
-  @media only screen and (max-width: 60em) {
-    @content;
-  }
-}
-
-@mixin bp-medium {
-  @media only screen and (max-width: 40em) {
-    @content;
-  }
-}
-
-@mixin bp-small {
-  @media only screen and (max-width: 30em) {
-    @content;
-  }
-}
-
-@mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }  
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }  
-    @keyframes #{$animation-name} {
-        @content;
-    }
 }
 
 @mixin animation($str) {
@@ -111,24 +43,31 @@ box-shadow: $shadow;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
   width: 11px; height: 11px;
-  box-shadow: 0 11px 211px 15px #00aeef;
+  box-shadow: 0 11px 211px 15px $blue;
 
-  @include animation(drop 4s ease-in infinite); // alternate
+  @include animation(drop 4s ease-in infinite);
 
   filter: blur(1px);
 }
 
+@mixin transition($in) {
+  transition:$in;
+  -webkit-transition:$in;
+  -moz-transition:$in;
+  -o-transition:$in;
+  -ms-transition:$in;
+}
 
 %line {
   cursor: pointer;
   border-radius: 5px;
   height: 3px;
   width: 20px;
-  background: $white;
+  background: $green;
   position: absolute;
   display: block;
   content: '';
-  @include transition(all 100ms ease-in-out);
+  @include transition(all 200ms ease-in-out);
 }
 
 %button {
@@ -139,68 +78,221 @@ box-shadow: $shadow;
   border-radius: 5px;
 }
 
-*,
-:after,
-:before {
+* {
   box-sizing: border-box;
+
+  &::selection {
+    background-color: $green;
+    color: #fff;
+  }
 }
 
 html {
-  overflow: auto;
+  height: 100%;
   @include transition(all 0.5s ease-in);
 }
 
 body {
-  font-family: "Titillium Web", sans-serif;//"Open Sans", sans-serif;
-  font-size: 16px;
-  background: $initial;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 1.4em;
+  height: 100%;
+  background-color: $lightgrey;
+  color: $darkgrey;
 }
 
-ul {
+ol, ul, li {
   margin: 0;
-  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  line-height: 25px;
 }
 
-li {
-  display: inline-block;
-  list-style: none;
+img {
+  border: 0;
 }
 
 a {
   text-decoration: none;
-  color: $link-color;
-  box-shadow: 
-    0 1px 0 $link-color,
-    0 2px 0 $link-color;
-  z-index: 1;
+  outline: none;
+  cursor: pointer;
 
+  &:active, &:focus,
+  &:link, &:visited,
   &:hover {
-    z-index: 2;
-    box-shadow:
-      0 1px 0 $link-color,
-      0 2px 0 $link-color;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 2px solid $green;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  position: absolute;
+  right: 0;
+  background: $green;
+  color: #fff;
+  padding: 10px;
+}
+
+#wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  position: relative;
+
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  .col {
+    width: 50%;
+    float: left;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  display: block;
+  width: 200px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 40px 20px;
+  z-index: 10;
+  height: 100%;
+
+  .header {
+    display: block;
+    padding: 0;
+    margin: 0 0 15px;
+
+    a {
+      color: $darkergrey;
     }
+
+    .logo {
+      font-weight: 600;
+      font-size: 18px;
+      display: inline-block;
+      line-height: 1.3em;
+
+      span {
+        max-width: 160px;
+        display: block;
+        background-size: contain;
+      }
+    }
+
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 16px;
+      opacity: .4;
+      display: inline-block;
+      margin-top: 5px;
+      line-height: 1.3em;
+    }
+  }
 }
 
 nav {
-  position: fixed;
-  top: 30px;
-  right: 15%;
-  color: $white;
-  z-index: 11;
+  text-align: left;
+
+  ul {
+    padding: 0;
+    margin: 0 0 25px;
+
+    li {
+      margin: 0 0 5px;
+      list-style: none;
+
+      a {
+        padding: 0;
+        line-height: 17px;
+        font-size: 15px;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 2px;
+
+        &:hover {
+          color: $darkgrey;
+        }
+      }
+    }
+  }
+
+  .links {
+    padding: 0;
+
+    a {
+      font-size: 18px;
+      font-weight: 300;
+      opacity: 1;
+      color: $medgrey;
+      transition: .1s all ease-out;
+    }
+
+    .active {
+      a {
+        background-color: $green;
+        color: #fff;
+        font-weight: 600;
+        margin: 5px 0;
+        line-height: 26px;
+        padding: 0 10px;
+        box-shadow: 0 6px 0 $darkgreen,
+                    0 10px 3px rgba(0,0,0,0.3);
+
+        &:active {
+            box-shadow: 0 3px 0 $darkgreen,0 6px 3px rgba(0,0,0,0.2);
+        }
+      }
+    }
+  }
 
   .icon {
     position: absolute;
     border-radius: 2px;
+    display: none;
     cursor: pointer;
-    background-color: transparent;
+    background-color: $lightgrey;
     padding: 12px 25px 15px 5px;
-    top: 11px;
-    @include transition(all 0.5s ease-in-out);
-    
+    right: 20px;
+    top: 40px;
+
     span {
       @extend %line;
 
@@ -216,7 +308,7 @@ nav {
     }
 
     &.active {
-      background-color: $nav-icon-bg;
+      background-color: #fff;
 
       span {
         background-color: transparent;
@@ -232,49 +324,350 @@ nav {
       }
     }
   }
+}
 
-  .container {
-    position: absolute;
-    opacity: 0;
-    // background: $lightgrey;
-    width: 200px;
-    height: auto;
-    right: 30px;
-    top: 3px;
-    margin: 0; padding: 0;
-    @include transition(all 0.5s ease-in-out);
+.main {
+  display: block;
+  position: relative;
+  padding: 0 0 0 20px;
+  margin: 40px 240px 0 0;
+  z-index: 1;
 
-    li {
+  a {
+    color: $green;
+
+    &:hover {
+      border-bottom: 2px solid $green;
+    }
+  }
+
+  #home, #work, #resume,
+  #recognitions, #contact {
+    height: 100%;
+    min-height: 100vh;
+    margin-bottom: 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  #home {
+    position: relative;
+    color: $darkgrey;
+
+    h1 {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 50px;
+      margin: 0;
+      line-height: 1em;
+
+      &:before {
+        content: "";
+      }
+
+      &:after {
+        content: "";
+      }
+    }
+
+    p {
+      line-height: 30px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 22px;
+
+      .working {
+        @include transition(all 0.5s ease-in-out);
+      }
+
+      .strike {
+        text-decoration: line-through;
+        color: $red;
+        @include transition(all 0.5s ease-in-out);
+      }
+
+    }
+
+    .intel {
+      background-color: $blue;
+      padding: 0 5px;
+      box-shadow:
+        0 2px 0 $lightblue,
+        0 2px 0 $blue;
+      color: $lightblue;
+      border-radius: 2px;
+      display: none;
+    }
+
+    .bb {
+      position: relative;
+
+      &:before, &:after {
+
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        background-color: $lightblue;
+        width: 10px;
+        height: 10px;
+        @extend %drip;
+      }
+
+      &:before {
+        left: 18px;
+        @include animation(drop 3.5s ease-in-out infinite);
+      }
+
+      &:after {
+        right: 20px;
+      }
+
+      input {
+        display: none;
+      }
+
+      span {
+        position: absolute;
+        content: 'intel';
+        display: none;
+      }
+    }
+  }
+
+  #resume {
+
+    .summary {
+      margin-top: 0;
+    }
+
+    .job {
+      margin: 0;
+
+      .company, .date {
+        font-weight: 600;
+      }
+      .date {
+        float: right;
+      }
+    }
+
+    .title  {
+      margin-top: 0;
+      border-bottom: 1px solid #c3c3c3;
+    }
+
+    ul {
+      padding-bottom: 20px;
+    }
+  }
+
+  #recognitions {
+
+    $recognitions: 14;
+    #recognition-slides {
+      width: 100%;
+      overflow: hidden;
+      
+      .inner {
+        width: $recognitions * 100%;
+        transition: all .7s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+      }
+      
+      .recognition {
+        width: 100% / $recognitions;
+        float: left;
+
+        &:nth-child(even) {
+        }
+      } 
+    }
+    input {
+      display: none;
+    }
+    
+    label {
+      background: $medgrey;
+      display: inline-block;
+      cursor: pointer;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+    }
+
+    @for $i from 1 through $recognitions {
+      #recognition#{$i}:checked ~ #recognition-slides .inner {
+        margin-left: ($i - 1) * -100%;
+      }
+    }
+
+    @for $i from 1 through $recognitions {
+      #recognition#{$i}:checked ~ label[for="recognition#{$i}"] {
+        background: $green;
+      }
+    }
+  }
+
+
+  #contact {
+
+    #contact-form {
+      margin: 10px 0;
+    }
+
+    input, textarea {
+      border: none;
+      background: transparent;
+      padding: 10px;
+      width: 100%;
+      border-bottom: 2px solid $green;
+      margin-bottom: 10px;
+      outline: none;
+      transition: all .3s cubic-bezier(1, .1, 0, 0.9);
+
+      &:focus {
+        background-color: $grey;
+      }
+    }
+
+    fieldset {
+      border: none;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background-color: $green;
+      color: #fff;
+      font-weight: 600;
+      margin: 5px 0;
+      line-height: 26px;
       padding: 0 10px;
+      box-shadow: 0 6px 0 $darkgreen,
+                  0 10px 3px rgba(0,0,0,0.3);
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 18px;
+
+      &:active {
+          box-shadow: 0 3px 0 $darkgreen,0 6px 3px rgba(0,0,0,0.2);
+      }                  
+    }
+
+    .alert {
+      padding: 10px;
+      color: #fff;
+
+      .alert--loading {}
+
+      .alert--success {
+        background: $green;
+      }
+
+      .alert--error {
+        background: $red;
+      }
+    }
+  }
+}
+
+
+.works {
+  margin: -8px -8px 0 -8px;
+  padding-left: 0;
+
+  .item {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: calc(50% - 16px);
+    float: left;
+    margin: 8px;
+    z-index: 1;
+    background: #fff;
+
+    &:after {
+      padding-top: 50%;
+      display: block;
+      content: '';
+    }
+
+    a {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
 
       &:hover {
-        background-color: $nav-icon-bg;
-        color: $white;
+        .metadata {
+          opacity: 1;
+        }
       }
     }
 
-    &.opened {
+    img {
+      width: 100%;
+    }
+
+    .metadata {
       display: block;
-      opacity: 1;
-      @include transition(all 0.5s ease-in-out);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      opacity: 0;
+      transition: opacity .4s ease;
+      z-index: 2;
+      color: #fff;
 
-    @keyframes container {
-      0% {
-        // opacity: 0;
-
+      .bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: .9;
+        z-index: 3;
+        background: $green;
       }
-      100% {
-        // opacity: 1;
+
+      .inner {
+        position: relative;
+        top: 50%;
+        margin: 0 auto;
+        width: 90%;
+        transform: translateY(-60%);
+        z-index: 4;
+        padding: 0 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+        line-height: 24px;
+        padding: 3px 0;
+      }
+
+      p {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300;
+        opacity: 0.7;
+        text-transform: uppercase;
+
+        line-height: 20px;
       }
     }
-
-    }    
   }
 }
 
 // switch idea
-
-$bg: white;
+$bg: #fff;
 $on: #07df18;
 $barWidth: 50px;
 $barHeight: 20px;
@@ -283,11 +676,10 @@ $knobSize: 15px;
 $iconsize: 25px;
 
 .switch {
-
-  position: fixed;
-  top: 40px;
-  left: 11%;
-  color: $white;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: #fff;
   z-index: 11;
 
   label {
@@ -330,17 +722,24 @@ $iconsize: 25px;
   }
 }
 
-.greeting {
-  position: relative;
-  margin: 37vh auto;
-  text-align: center;
-  color: #fff;
-  padding: 10px;
-  max-width: 55vw;
-  height: 100vh;
+footer {
+  display: block;
+  position: fixed;
+  background-color: $lightgrey;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 13px;
+  line-height: 1.4em;
+  z-index: 1010;
 
-  p {}
+  .social {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
 
+<<<<<<< 1ceecba9287c01ba40b55c0b9adb5dac0c8edf82
   h1 {
     position: relative;
     color: $white;
@@ -348,102 +747,127 @@ $iconsize: 25px;
     font-size: 40px;
     margin: 0;
     line-height: 1em;
+=======
+    li {
+      display: inline-block;
+      padding: 0 10px;
+>>>>>>> Updated site with actual content
 
-    &:before {
-      content: "";
+      a {
+        color: $green;
+
+        &:hover {
+          border-bottom: 2px solid $green;
+        }
+      }
     }
 
-    &:after {
-      content: "";
-    }
+    .github { }
+    .codepen { }
+    .linkedin { }
   }
 
-.intel {
-  box-shadow: 
-    0 1px 0 $lightblue,
-    0 2px 0 $blue;
-  color: $lightblue;
 }
 
-.bb {
-  position: relative;
-  display: inline-block;
-
-  &:before, &:after {
-
-// @include debug;
-    
-    content: '';
-    position: absolute;
-    bottom: 0;
-    background-color: $lightblue;
-    width: 10px;
-    height: 10px;
-    @extend %drip;
-  }
-
-  &:before {
-    left: 12px;
-    @include animation(drop 3.5s ease-in-out infinite); // alternate
-  }
-
-  &:after {
-    right: 11px;
-  }
-
-  input {
-    display: none;
-  }
-
-  span {
-    position: absolute;
-    content: 'intel';
-    display: none;
-  }
-}
-}
-
-.resume {
-  background-color: $white;
-  position: relative;
-  padding: 0 20px;
-
-  &:before {
-    position: relative;
-    display: inline-block;
+@media only screen and (max-width: 960px) {
+  .works .item {
     width: 100%;
   }
 }
 
+@media screen and (min-width:761px) {}
 
-#footer {
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
+@media screen and (max-width:641px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    height: 75px;
 
-  #social {
-    margin: 0 auto;
-    text-align: center;
+    .header {
+      position: relative;
+      top: 15px;
+      left: 20px;
 
-    li {
-      padding: 0 10px;
+      h2 {
+        display: block;
+        text-align: left;
+        color: $darkgrey;
+      }
     }
 
-    .github { }
+    nav ul {
+      display: none;
+
+      li { display: inline-block; }
+    }
+
+    .icon {
+      display: block;
+      top: 20px;
+    }
+
+    .container {
+      position: relative;
+      top: 10px;
+
+      .links {
+        margin-left: 20px;
+
+        li {
+          margin: 0 10px 0 0;
+        }
+
+        a {
+          font-size: 16px;
+          font-weight: 400;
+          color: $darkgrey;
+          transition: .1s all ease-out;
+
+          &:hover {
+            background: $darkgrey;
+            color: #fff;
+            box-shadow: none;
+
+            margin: 0;
+            padding: 5px;
+          }
+        }
+
+        .active a {
+          background: $darkgrey;
+          color: #fff;
+          box-shadow: none;
+
+          margin: 0;
+          padding: 0 5px;
+
+        }
+      }
+    }
   }
+
+  .main {
+    width: 100%;
+    padding: 0 20px 0 20px;
+    top: 40px;
+    margin: 0;
+  }
+
+
+    .grid {
+
+      .col {
+        width: 100%;
+        float: none;
+      }
+
+    }
+
+
 }
 
-
-@media only screen and (max-width: 1200px) {
-}
-
-@media only screen and (max-width: 992px) {
-}
-
-@media only screen and (max-width: 768px) {
-}
-
-@media only screen and (max-width: 480px) {
-
-}
-
+@media screen and (max-width:481px) {}
+@media screen and (max-width:320px) {}
