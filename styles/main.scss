@@ -555,16 +555,18 @@ nav {
     .alert {
       padding: 10px;
       color: #fff;
+    }
 
-      .alert--loading {}
+    .alert--loading {
+      background: $medgrey;
+    }
 
-      .alert--success {
-        background: $green;
-      }
+    .alert--success {
+      background: $green;
+    }
 
-      .alert--error {
-        background: $red;
-      }
+    .alert--error {
+      background: $red;
     }
   }
 }
@@ -739,19 +741,9 @@ footer {
     padding: 0;
     text-align: center;
 
-<<<<<<< 1ceecba9287c01ba40b55c0b9adb5dac0c8edf82
-  h1 {
-    position: relative;
-    color: $white;
-    text-transform: uppercase;
-    font-size: 40px;
-    margin: 0;
-    line-height: 1em;
-=======
     li {
       display: inline-block;
       padding: 0 10px;
->>>>>>> Updated site with actual content
 
       a {
         color: $green;

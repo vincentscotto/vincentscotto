@@ -413,10 +413,12 @@ nav {
   .main #contact .alert {
     padding: 10px;
     color: #fff; }
-    .main #contact .alert .alert--success {
-      background: #5cc924; }
-    .main #contact .alert .alert--error {
-      background: #f14440; }
+  .main #contact .alert--loading {
+    background: #8f8f8f; }
+  .main #contact .alert--success {
+    background: #5cc924; }
+  .main #contact .alert--error {
+    background: #f14440; }
 
 .works {
   margin: -8px -8px 0 -8px;
@@ -537,31 +539,6 @@ nav {
         -o-transition: all 0.5s ease-in-out;
         -ms-transition: all 0.5s ease-in-out; }
 
-<<<<<<< 1ceecba9287c01ba40b55c0b9adb5dac0c8edf82
-.greeting {
-  position: relative;
-  margin: 37vh auto;
-  text-align: center;
-  color: #fff;
-  padding: 10px;
-  max-width: 55vw;
-  height: 100vh; }
-  .greeting h1 {
-    position: relative;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 40px;
-    margin: 0;
-    line-height: 1em; }
-    .greeting h1:before {
-      content: ""; }
-    .greeting h1:after {
-      content: ""; }
-  .greeting .intel {
-    box-shadow: 0 1px 0 #00aeef, 0 2px 0 #0071c5;
-    color: #00aeef; }
-  .greeting .bb {
-=======
 footer {
   display: block;
   position: fixed;
@@ -590,7 +567,6 @@ footer {
     width: 100%; } }
 @media screen and (max-width: 641px) {
   .sidebar {
->>>>>>> Updated site with actual content
     position: relative;
     width: 100%;
     z-index: 100;
