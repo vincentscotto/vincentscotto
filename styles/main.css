@@ -412,7 +412,8 @@ nav {
       box-shadow: 0 3px 0 #439230, 0 6px 3px rgba(0, 0, 0, 0.2); }
   .main #contact .alert {
     padding: 10px;
-    color: #fff; }
+    color: #fff;
+    margin-top: 10px; }
   .main #contact .alert--loading {
     background: #8f8f8f; }
   .main #contact .alert--success {
