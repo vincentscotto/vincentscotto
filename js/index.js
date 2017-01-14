@@ -82,7 +82,7 @@ $contactForm.submit(function(e) {
     },
     error: function(err) {
       $contactForm.find('.alert--loading').hide();
-      $contactForm.append('<div class="alert alert--error">Ops, there was an error. Please send me an email instead: <a href="mailto:vincent@scotto.ws">vincent @ scotto.ws</a>. Thanks!</div>');
+      $contactForm.append('<div class="alert alert--error">Oops, there was an error. Please send me an email instead: <a href="mailto:vincent@scotto.ws">vincent @ scotto.ws</a>. Thanks!</div>');
     }
   });
 });
