@@ -20,11 +20,11 @@ I am into frontend things. I love me some CSS. I like art. Sometimes for fun I'l
 ---
 
 <a href="https://twitter.com/vinc3nt">
-  <img align="left" alt="Vincent's Twitter" width="15px" src="https://simpleicons.now.sh/twitter/495f7e" />
+  <img align="left" alt="Vincent's Twitter" width="25px" src="https://simpleicons.now.sh/twitter/495f7e" />
 </a>
 <a href="https://www.instagram.com/doodleboyart/">
-  <img align="left" alt="Vincent's Instagram" width="15px" src="https://simpleicons.now.sh/instagram/495f7e" />
+  <img align="left" alt="Vincent's Instagram" width="25px" src="https://simpleicons.now.sh/instagram/495f7e" />
 </a>
 <a href="https://linkedin.com/in/vincentscotto">
-  <img align="left" alt="Vincent's LinkedIn" width="15px" src="https://simpleicons.now.sh/linkedin/495f7e" />
+  <img align="left" alt="Vincent's LinkedIn" width="25px" src="https://simpleicons.now.sh/linkedin/495f7e" />
 </a> &nbsp; https://vincentscotto.com &nbsp; | &nbsp;  https://humblearrogance.com
