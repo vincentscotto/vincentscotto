@@ -7,10 +7,10 @@ I am into frontend things. I love me some CSS. I like art. Sometimes for fun I'l
 ![languages](https://img.shields.io/static/v1?label=&message=languages:&color=111&style=flat-square)
 ![javascript](https://img.shields.io/static/v1?logo=javascript&label=&message=javascript&color=36465D&logoColor=AAA&style=flat-square)
 ![html5](https://img.shields.io/static/v1?logo=html5&label=&message=html5&color=36465D&logoColor=AAA&style=flat-square)
+&nbsp;&nbsp;&nbsp;
 ![tools](https://img.shields.io/static/v1?label=&message=tools:&color=111&style=flat-square)
 ![react](https://img.shields.io/static/v1?logo=react&label=&message=react&color=36465D&logoColor=AAA&style=flat-square)
 ![sass](https://img.shields.io/static/v1?logo=&label=&message=sass&color=36465D&logoColor=AAA&style=flat-square)
-&nbsp;&nbsp;&nbsp;
 ![docker](https://img.shields.io/static/v1?logo=docker&label=&message=docker&color=36465D&logoColor=AAA&style=flat-square)
 ![git](https://img.shields.io/static/v1?logo=git&label=&message=git&color=36465D&logoColor=AAA&style=flat-square)
 &nbsp;&nbsp;&nbsp;
