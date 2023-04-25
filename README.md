@@ -25,6 +25,6 @@ I am into frontend things. I love me some CSS. I like art. Sometimes for fun I'l
 <a href="https://www.instagram.com/doodleboyart/">
   <img align="left" alt="Vincent's Instagram" width="25px" src="https://simpleicons.now.sh/instagram/495f7e" />
 </a>
-<a href="https://linkedin.com/in/vincentscotto">
+<a href="https://www.linkedin.com/in/vincent-scotto-54a57689/">
   <img align="left" alt="Vincent's LinkedIn" width="25px" src="https://simpleicons.now.sh/linkedin/495f7e" />
 </a> &nbsp; https://vincentscotto.com &nbsp; | &nbsp;  https://humblearrogance.com
