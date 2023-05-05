@@ -19,6 +19,9 @@ I am into frontend things. I love me some CSS. I like art. Sometimes for fun I'l
 
 ---
 
+<a href="https://codepen.io/vincentscotto">
+  <img align="left" alt="Vincent's codepen" width="25px" src="https://simpleicons.vercel.app/codepen/495f7e" />
+</a>
 <a href="https://twitter.com/vinc3nt">
   <img align="left" alt="Vincent's Twitter" width="25px" src="https://simpleicons.now.sh/twitter/495f7e" />
 </a>
