@@ -2,7 +2,7 @@
 
 **Hi, I'm Vincent!**
 
-I am into frontend things. I love me some CSS. I like art. Sometimes for fun I'll draw and make clay sculptures. Sometimes I push code on Fridays and walk away.
+I am into frontend things. I love me some CSS. I like art. For fun I draw and make clay sculptures. Sometimes I push code on a Friday and just walk away.
 
 ![languages](https://img.shields.io/static/v1?label=&message=languages:&color=111&style=flat-square)
 ![javascript](https://img.shields.io/static/v1?logo=javascript&label=&message=javascript&color=36465D&logoColor=AAA&style=flat-square)
