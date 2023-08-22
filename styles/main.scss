@@ -22,7 +22,7 @@ $lightblue: #00AEEF;
   -moz-animation: #{$str};
   -ms-animation: #{$str};
   -o-animation: #{$str};
-  animation: #{$str};      
+  animation: #{$str};
 }
 
 @keyframes drop {
@@ -42,7 +42,8 @@ $lightblue: #00AEEF;
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
-  width: 11px; height: 11px;
+  width: 11px;
+  height: 11px;
   box-shadow: 0 11px 211px 15px $blue;
 
   @include animation(drop 4s ease-in infinite);
@@ -51,11 +52,11 @@ $lightblue: #00AEEF;
 }
 
 @mixin transition($in) {
-  transition:$in;
-  -webkit-transition:$in;
-  -moz-transition:$in;
-  -o-transition:$in;
-  -ms-transition:$in;
+  transition: $in;
+  -webkit-transition: $in;
+  -moz-transition: $in;
+  -o-transition: $in;
+  -ms-transition: $in;
 }
 
 %line {
@@ -100,7 +101,9 @@ body {
   color: $darkgrey;
 }
 
-ol, ul, li {
+ol,
+ul,
+li {
   margin: 0;
   border: 0;
   vertical-align: baseline;
@@ -116,8 +119,10 @@ a {
   outline: none;
   cursor: pointer;
 
-  &:active, &:focus,
-  &:link, &:visited,
+  &:active,
+  &:focus,
+  &:link,
+  &:visited,
   &:hover {
     outline: none;
     text-decoration: none;
@@ -129,7 +134,10 @@ p {
   line-height: 30px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
 }
@@ -274,10 +282,10 @@ nav {
         line-height: 26px;
         padding: 0 10px;
         box-shadow: 0 6px 0 $darkgreen,
-                    0 10px 3px rgba(0,0,0,0.3);
+          0 10px 3px rgba(0, 0, 0, 0.3);
 
         &:active {
-            box-shadow: 0 3px 0 $darkgreen,0 6px 3px rgba(0,0,0,0.2);
+          box-shadow: 0 3px 0 $darkgreen, 0 6px 3px rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -296,12 +304,15 @@ nav {
     span {
       @extend %line;
 
-      &:before, &:after {
+      &:before,
+      &:after {
         @extend %line;
       }
+
       &:before {
         top: -5px;
       }
+
       &:after {
         bottom: -5px;
       }
@@ -317,6 +328,7 @@ nav {
           top: 0;
           transform: rotate(45deg);
         }
+
         &:after {
           top: 0;
           transform: rotate(-45deg);
@@ -341,13 +353,20 @@ nav {
     }
   }
 
-  #home, #work, #resume,
-  #recognitions, #contact {
+  #home,
+  #work,
+  #resume,
+  #recognitions,
+  #contact {
     height: 100%;
     min-height: 100vh;
     margin-bottom: 40px;
     overflow-y: auto;
     overflow-x: hidden;
+  }
+
+  #resume {
+    margin-bottom: 80px;
   }
 
   #home {
@@ -402,7 +421,8 @@ nav {
     .bb {
       position: relative;
 
-      &:before, &:after {
+      &:before,
+      &:after {
 
         content: '';
         position: absolute;
@@ -443,15 +463,17 @@ nav {
     .job {
       margin: 0;
 
-      .company, .date {
+      .company,
+      .date {
         font-weight: 600;
       }
+
       .date {
         float: right;
       }
     }
 
-    .title  {
+    .title {
       margin-top: 0;
       border-bottom: 1px solid #c3c3c3;
     }
@@ -464,27 +486,28 @@ nav {
   #recognitions {
 
     $recognitions: 14;
+
     #recognition-slides {
       width: 100%;
       overflow: hidden;
-      
+
       .inner {
         width: $recognitions * 100%;
         transition: all .7s cubic-bezier(0.770, 0.000, 0.175, 1.000);
       }
-      
+
       .recognition {
         width: 100% / $recognitions;
         float: left;
 
-        &:nth-child(even) {
-        }
-      } 
+        &:nth-child(even) {}
+      }
     }
+
     input {
       display: none;
     }
-    
+
     label {
       background: $medgrey;
       display: inline-block;
@@ -495,13 +518,13 @@ nav {
     }
 
     @for $i from 1 through $recognitions {
-      #recognition#{$i}:checked ~ #recognition-slides .inner {
+      #recognition#{$i}:checked~#recognition-slides .inner {
         margin-left: ($i - 1) * -100%;
       }
     }
 
     @for $i from 1 through $recognitions {
-      #recognition#{$i}:checked ~ label[for="recognition#{$i}"] {
+      #recognition#{$i}:checked~label[for="recognition#{$i}"] {
         background: $green;
       }
     }
@@ -514,7 +537,8 @@ nav {
       margin: 10px 0;
     }
 
-    input, textarea {
+    input,
+    textarea {
       border: none;
       background: transparent;
       padding: 10px;
@@ -543,13 +567,13 @@ nav {
       line-height: 26px;
       padding: 0 10px;
       box-shadow: 0 6px 0 $darkgreen,
-                  0 10px 3px rgba(0,0,0,0.3);
+        0 10px 3px rgba(0, 0, 0, 0.3);
       font-family: 'Open Sans Condensed', sans-serif;
       font-size: 18px;
 
       &:active {
-          box-shadow: 0 3px 0 $darkgreen,0 6px 3px rgba(0,0,0,0.2);
-      }                  
+        box-shadow: 0 3px 0 $darkgreen, 0 6px 3px rgba(0, 0, 0, 0.2);
+      }
     }
 
     .alert {
@@ -695,7 +719,7 @@ $iconsize: 25px;
     @include transition(all 0.5s ease-in-out);
     cursor: pointer;
     box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
-    
+
     &:before {
       content: "";
       position: absolute;
@@ -710,10 +734,11 @@ $iconsize: 25px;
       @include transition(all 0.5s ease-in-out);
     }
   }
+
   input {
     display: none;
 
-    &:checked + label {
+    &:checked+label {
       background-color: $on;
 
       &:before {
@@ -755,9 +780,11 @@ footer {
       }
     }
 
-    .github { }
-    .codepen { }
-    .linkedin { }
+    .github {}
+
+    .codepen {}
+
+    .linkedin {}
   }
 
 }
@@ -794,7 +821,9 @@ footer {
     nav ul {
       display: none;
 
-      li { display: inline-block; }
+      li {
+        display: inline-block;
+      }
     }
 
     .icon {
@@ -850,17 +879,18 @@ footer {
   }
 
 
-    .grid {
+  .grid {
 
-      .col {
-        width: 100%;
-        float: none;
-      }
-
+    .col {
+      width: 100%;
+      float: none;
     }
+
+  }
 
 
 }
 
 @media screen and (max-width:481px) {}
+
 @media screen and (max-width:320px) {}
