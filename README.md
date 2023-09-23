@@ -1,8 +1,8 @@
-# ![hi](https://emojis.slackmojis.com/emojis/images/1643514442/4244/blob-octopus.gif?1643514442)
+![hi](https://emojis.slackmojis.com/emojis/images/1643514442/4244/blob-octopus.gif?1643514442)
 
 **Hi, I'm Vincent!**
 
-I am into frontend things. I love me some CSS. I like art. For fun I draw and make clay sculptures. Sometimes I push code on a Friday and just walk away.
+I am into frontend things. I love me some CSS. I like art. For fun I draw and make clay sculptures. Sometimes I push code on a Friday and just walk away (jk).
 
 ![languages](https://img.shields.io/static/v1?label=&message=languages:&color=111&style=flat-square)
 ![html5](https://img.shields.io/static/v1?logo=html5&label=&message=html5&color=36465D&logoColor=AAA&style=flat-square)
