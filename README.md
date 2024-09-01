@@ -24,7 +24,7 @@ I am into frontend things. I love me some CSS. I like art. For fun I draw and ma
   <img align="left" alt="Vincent's codepen" width="25px" src="https://simpleicons.vercel.app/codepen/495f7e" />
 </a>
 <a href="https://twitter.com/vinc3nt">
-  <img align="left" alt="Vincent's Twitter" width="25px" src="https://simpleicons.now.sh/twitter/495f7e" />
+  <img align="left" alt="Vincent's Twitter" width="25px" src="https://simpleicons.now.sh/x/495f7e" />
 </a>
 <a href="https://www.instagram.com/doodleboyart/">
   <img align="left" alt="Vincent's Instagram" width="25px" src="https://simpleicons.now.sh/instagram/495f7e" />
